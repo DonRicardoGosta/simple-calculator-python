@@ -15,7 +15,12 @@ def is_valid_operator(operator):
 
 
 def ask_for_a_number(force_valid_input):
-    pass
+    while(True):
+        answer = input("Please provide a number\n")
+        if is_number(answer) == True:
+            return answer
+        else:
+            input("This didn't look like a number, try again.")
 
 
 def ask_for_an_operator(force_valid_input):
