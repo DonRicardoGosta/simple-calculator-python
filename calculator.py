@@ -1,5 +1,9 @@
 def is_number(str):
-    return False
+    try:
+        num=int(str)
+        return num
+    except ValueError:
+        return None
 
 
 def is_valid_operator(operator):
