@@ -24,7 +24,12 @@ def ask_for_a_number(force_valid_input):
 
 
 def ask_for_an_operator(force_valid_input):
-    pass
+    while(True):
+        answer = input("Please provide an operator (one of +, -, *, /)!\n")
+        if is_valid_operator(answer) != False:
+            return answer
+        else:
+            input("Unknown operator, try again.")
 
 
 def calc(operator, a, b):
