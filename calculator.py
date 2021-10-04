@@ -33,7 +33,20 @@ def ask_for_an_operator(force_valid_input):
 
 
 def calc(operator, a, b):
-    pass
+    if operator == None or a == None or b == None:
+        return "Wrong input, please try again"
+    else:
+        if operator == "+":
+            return a+b
+        elif operator == "-":
+            return a-b
+        elif operator == "*":
+            return a*b
+        elif operator == "/":
+            if a == 0 or b == 0:
+                return None
+            else:
+                return a/b
 
 
 def simple_calculator():
