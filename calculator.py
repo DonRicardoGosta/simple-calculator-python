@@ -1,9 +1,9 @@
 def is_number(str):
     try:
         num=int(str)
-        return num
+        return True
     except ValueError:
-        return None
+        return False
 
 
 def is_valid_operator(operator):
@@ -50,7 +50,11 @@ def calc(operator, a, b):
 
 
 def simple_calculator():
-    pass
+    a = ask_for_a_number(True)
+    operator = ask_for_an_operator(True)
+    b = ask_for_a_number(True)
+    result = calc(a,operator,b)
+    print("the result is: ",result)
 
 
 if __name__ == '__main__':
