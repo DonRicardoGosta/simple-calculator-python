@@ -7,7 +7,11 @@ def is_number(str):
 
 
 def is_valid_operator(operator):
-    return False
+    valid_operators= ["+","-","*","/"]
+    if operator in valid_operators:
+        return True
+    else:
+        return False
 
 
 def ask_for_a_number(force_valid_input):
